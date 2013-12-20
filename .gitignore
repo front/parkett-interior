@@ -19,6 +19,7 @@ Thumbs.db
 *.swp
 ._*
 *~
+_site
 
 # Ignore packages #
 *.7z
