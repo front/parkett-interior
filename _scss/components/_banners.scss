@@ -1,0 +1,47 @@
+.banner {
+  @extend %border-box;
+  width: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  min-height: 450px;
+  text-align:center;
+  padding: 12% 10%;
+  @include background-size(cover);
+
+  @include breakpoint($break-medium) {
+    background-attachment: fixed;
+  }
+}
+
+.banner .btn {
+  display: inline-block;
+}
+
+.banner--title {
+  margin-top: 0;
+  @extend .h2;
+  
+  @include breakpoint($break-medium) {
+    @include adjust-font-size-to(67px);
+  }
+}
+
+.banner--text {
+  margin-bottom: $space-double;
+  text-shadow: 0 0 8px $color-white;
+  @include adjust-font-size-to($banner-text-font-size,1.25);
+
+  @include breakpoint($break-medium) {
+    @include adjust-font-size-to($banner-text-font-size*1.25,1.5);
+  }
+}
+
+.banner__lead {
+  @extend .banner;
+  background-image: image-url('designstudio.jpg');
+}
+
+.banner__showroom {
+  @extend .banner;
+  background-image: image-url('designstudio-3.jpg');
+}

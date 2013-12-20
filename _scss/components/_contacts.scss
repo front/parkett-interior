@@ -1,0 +1,58 @@
+.contacts {
+  @extend %section-space;
+}
+
+.contact {
+  @extend .clearfix;
+
+  @include breakpoint(max-width $break-medium) {
+    padding: 0 $space; 
+  }
+
+  + .contact {
+    @include breakpoint(max-width $break-medium) {
+      margin-top: $space;
+      padding-top: $space;
+      border-top: 1px solid $contact-border-color;
+    }
+  }
+}
+
+.contact--avatar {
+
+  @include breakpoint(max-width $break-medium) {
+    width: 25%;
+    float: right; 
+  }
+
+  @include breakpoint($break-medium) {
+    width: 75%;
+    margin: 0 auto $space;
+    display: block;
+  }
+}
+
+.contact--name {
+  @extend .h5;
+  margin-top: 0;
+}
+
+.contact--title {
+}
+
+.contact--email,
+.contact--phone {
+  @include adjust-font-size-to(18px,1.25);
+  text-decoration: none;
+
+
+  [class^="icon-"],
+  [class*=" icon-"] {
+    font-size: 16px;
+    margin-right: $space-half;
+
+    @include breakpoint($break-medium) {
+      // margin-left: -($space + $space-half);
+    }
+  }
+}

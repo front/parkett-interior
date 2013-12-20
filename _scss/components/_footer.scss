@@ -1,0 +1,21 @@
+.page-footer {
+  background-color: $page-footer-bg-color;
+  color: $page-footer-color;
+}
+
+
+.page-footer a {
+  color: $page-footer-link-color;
+
+  &:hover,
+  &:focus {
+    color: $page-footer-link-color-hover;
+  }
+}
+
+// Footer bottom
+.footer-bottom {
+  background-color: black;
+  padding: $space 0;
+  color: #999;
+}

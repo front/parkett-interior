@@ -1,0 +1,77 @@
+%reference-width-text {
+  @include breakpoint($break-small) {
+    width: 65%; 
+  }
+}
+
+.references {
+  // Fix for using inline-block insted of float on references.
+  font-size: 0;
+  
+  @extend %section-space;
+}
+
+.reference {
+  font-size: $base-font-size;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  float: none;
+
+  @include breakpoint(max-width $break-medium) {
+    padding: 0 $space; 
+  }
+
+  @include breakpoint($break-small $break-medium) {
+    padding-top: 20%;
+  }
+
+  @include breakpoint($break-xlarge) {
+    margin-top: $space-triple;
+  }
+
+  + .reference {
+    @include breakpoint(max-width $break-small) {
+      padding-top: $space;
+    }
+
+    @include breakpoint(max-width $break-medium) {
+      border-top: 1px solid $references-border-color;
+    }
+  }
+
+  .lt-ie8 & {
+    display: inline;
+    zoom: 1;
+  }
+}
+
+.reference--title {
+  @extend .h5;
+  @extend %reference-width-text;
+  color: $references-title-color;
+  margin-bottom: $space;
+  margin-top: 0;
+}
+
+.reference--img-portrait {
+  display: none;
+
+  @include breakpoint($break-small) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 33%;
+  }
+}
+
+.reference--author {
+  @extend %reference-width-text;
+  @extend .h6;
+  margin-top: 0;
+}
+
+.reference--role {
+  @extend %reference-width-text;
+}

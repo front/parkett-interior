@@ -1,0 +1,21 @@
+// Only plane html tags. No classes selectors.
+body {
+  background-image: none;
+  background-color: $body-bg-color;
+  font-family: Lato, "Helvetica Neue", arial, sans-serif;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: $link-color-hover;
+    text-decoration: underline;
+  }
+}

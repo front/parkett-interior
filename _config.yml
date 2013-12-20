@@ -1,0 +1,9 @@
+name: Parkett og Interiør
+description: Parkett og Inreriør jekyll site
+
+permalink: pretty
+
+# Markdown library
+markdown: maruku
+
+pygments: true

@@ -1,0 +1,15 @@
+%section-space {
+  padding: $space 0;
+
+  @include breakpoint($break-medium $break-large) {
+    padding: $space-double 0;
+  }
+
+  @include breakpoint($break-large) {
+    padding: $space-triple 0; 
+  }
+
+  @include breakpoint($break-xlarge) {
+    padding: ($space * 4) 0;
+  }
+}
